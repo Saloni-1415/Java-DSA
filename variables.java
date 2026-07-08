@@ -4,17 +4,23 @@
 //SYNTAX : dataType variableName = value;
 
 public class variables {
-    public static void main(String args[]){
+
+    public static void main(String[] args) {
+
         int a = 9;
-        int b= 7;
+        int b = 7;
+
         System.out.println(a);
         System.out.println(b);
-        System.out.println(a+b);
-        String name = "Saisha" ;
+        System.out.println(a + b);
+
+        String name = "Saisha";
         System.out.println(name);
 
         int score = 50;
-        score = 75;  // Value updated
+        System.out.println(score);
+
+        score = 75;
         System.out.println(score);
     }
 }
