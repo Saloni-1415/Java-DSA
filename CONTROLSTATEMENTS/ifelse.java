@@ -8,9 +8,9 @@ public class ifelse {
         int age = 18;
 
         if (age >= 18) {
-            System.out.println("You are eligible to vote");
+            System.out.println("You are eligible to vote.");
         } else {
-            System.out.println("You are not eligible to vote");
+            System.out.println("You are not eligible to vote.");
         }
 
         // Largest of Two Numbers
@@ -27,54 +27,54 @@ public class ifelse {
         int c = 7;
 
         if (c % 2 == 0) {
-            System.out.println("The number is even");
+            System.out.println("The number is Even.");
         } else {
-            System.out.println("The number is odd");
+            System.out.println("The number is Odd.");
         }
 
-        Scanner sc = new Scanner(System.in);
+        // Scanner (Try-With-Resources)
+        try (Scanner sc = new Scanner(System.in)) {
 
-        // Income Tax Calculator
-        System.out.print("\nEnter your annual income: ");
-        int income = sc.nextInt();
+            // Income Tax Calculator
+            System.out.print("\nEnter your annual income: ");
+            int income = sc.nextInt();
 
-        int tax = 0;
+            int tax;
 
-        if (income < 500000) {
-            tax = 0;
-        } else if (income <= 1000000) {
-            tax = income * 20 / 100;
-        } else {
-            tax = income * 30 / 100;
+            if (income < 500000) {
+                tax = 0;
+            } else if (income <= 1000000) {
+                tax = income * 20 / 100;
+            } else {
+                tax = income * 30 / 100;
+            }
+
+            System.out.println("Tax Applicable = " + tax);
+
+            // Largest of Three Numbers
+            System.out.println("\nEnter three numbers:");
+
+            int num1 = sc.nextInt();
+            int num2 = sc.nextInt();
+            int num3 = sc.nextInt();
+
+            if (num1 >= num2 && num1 >= num3) {
+                System.out.println("Largest Number = " + num1);
+            } else if (num2 >= num1 && num2 >= num3) {
+                System.out.println("Largest Number = " + num2);
+            } else {
+                System.out.println("Largest Number = " + num3);
+            }
+
+            // Student Result Checker
+            System.out.print("\nEnter student marks: ");
+            int marks = sc.nextInt();
+
+            if (marks >= 33) {
+                System.out.println("Result: PASS");
+            } else {
+                System.out.println("Result: FAIL");
+            }
         }
-
-        System.out.println("Tax Applicable = " + tax);
-
-        // Largest of Three Numbers
-        System.out.println("\nEnter three numbers:");
-
-        int num1 = sc.nextInt();
-        int num2 = sc.nextInt();
-        int num3 = sc.nextInt();
-
-        if (num1 >= num2 && num1 >= num3) {
-            System.out.println("Largest Number = " + num1);
-        } else if (num2 >= num1 && num2 >= num3) {
-            System.out.println("Largest Number = " + num2);
-        } else {
-            System.out.println("Largest Number = " + num3);
-        }
-
-        // Student Result Checker
-        System.out.print("\nEnter student marks: ");
-        int marks = sc.nextInt();
-
-        if (marks >= 33) {
-            System.out.println("Result: PASS");
-        } else {
-            System.out.println("Result: FAIL");
-        }
-
-        sc.close();
     }
 }
