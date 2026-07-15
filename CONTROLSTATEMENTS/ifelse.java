@@ -1,8 +1,10 @@
 import java.util.Scanner;
+
 public class ifelse {
 
     public static void main(String[] args) {
 
+        // Voting Eligibility Checker
         int age = 18;
 
         if (age >= 18) {
@@ -11,71 +13,68 @@ public class ifelse {
             System.out.println("You are not eligible to vote");
         }
 
-        //print largest of two numbers 
-        int a = 10 ;
-        int b= 20 ;
+        // Largest of Two Numbers
+        int a = 10;
+        int b = 20;
 
-    
-        if(a>b){
-            System.out.println("LARGEST NUMBER = " + a);
-        }
-        else{
-            System.out.println("LARGEST NUMBER = "+ b);
+        if (a > b) {
+            System.out.println("Largest Number = " + a);
+        } else {
+            System.out.println("Largest Number = " + b);
         }
 
-        // print even or odd 
-        int c = 7 ;
+        // Even or Odd
+        int c = 7;
 
-        if (c % 2==0){
+        if (c % 2 == 0) {
             System.out.println("The number is even");
-        }
-        else{
+        } else {
             System.out.println("The number is odd");
         }
 
-        //Income Tax Calculator
-        Scanner sc = new Scanner (System.in);
+        Scanner sc = new Scanner(System.in);
+
+        // Income Tax Calculator
+        System.out.print("\nEnter your annual income: ");
         int income = sc.nextInt();
+
         int tax = 0;
 
-        if(income < 500000){
-            System.out.println("0% tax applicable");
-        }
-        else if (income >= 500000 && income <= 1000000){
-            tax = income * 20/100;
-            System.out.println("Tax Applicable = " + tax);
-        }
-        else {
-            tax = income * 30/100;
-            System.out.println("Tax Applicable = " + tax);
+        if (income < 500000) {
+            tax = 0;
+        } else if (income <= 1000000) {
+            tax = income * 20 / 100;
+        } else {
+            tax = income * 30 / 100;
         }
 
-        //largest of three numbers 
+        System.out.println("Tax Applicable = " + tax);
+
+        // Largest of Three Numbers
+        System.out.println("\nEnter three numbers:");
+
         int num1 = sc.nextInt();
         int num2 = sc.nextInt();
         int num3 = sc.nextInt();
 
-        if (num1>num2 && num1>num3){
+        if (num1 >= num2 && num1 >= num3) {
             System.out.println("Largest Number = " + num1);
-        }
-        else if (num2>num1 && num2>num3){
-            System.out.println("Largest Number = "+ num2);
-        }
-        else {
-            System.out.println("Largest Number = "+ num3);
+        } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println("Largest Number = " + num2);
+        } else {
+            System.out.println("Largest Number = " + num3);
         }
 
-        // student result checker
-
+        // Student Result Checker
+        System.out.print("\nEnter student marks: ");
         int marks = sc.nextInt();
 
-        if (marks <= 33) {
-            System.out.println("PASS");
-        }
-        else {
-            System.out.println("FAIL");
+        if (marks >= 33) {
+            System.out.println("Result: PASS");
+        } else {
+            System.out.println("Result: FAIL");
         }
 
-
+        sc.close();
     }
 }

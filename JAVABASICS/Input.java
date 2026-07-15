@@ -18,20 +18,26 @@ public class Input {
 } */
 
 import java.util.*;
+
 public class Input {
-    public static void main (String args[]) {
-        Scanner sc = new Scanner (System.in);
+    public static void main(String[] args) {
 
-        System.out.print("Enter First Number: ");
-        int a = sc.nextInt();
-        System.out.print("Enter Second Number: ");
-        int b = sc.nextInt();
-        int sum = a + b ;
-        System.out.println("Sum= " + sum);
+        try (Scanner sc = new Scanner(System.in)) {
 
-        System.out.print(" Enter your radius : ");
-        float radius = sc.nextInt();
-        float area = 3.14f * radius * radius; 
-        System.out.println("Radius = " + area);
+            System.out.print("Enter First Number: ");
+            int a = sc.nextInt();
+
+            System.out.print("Enter Second Number: ");
+            int b = sc.nextInt();
+
+            int sum = a + b;
+            System.out.println("Sum = " + sum);
+
+            System.out.print("Enter your radius: ");
+            float radius = sc.nextFloat();
+
+            float area = 3.14f * radius * radius;
+            System.out.println("Area = " + area);
+        }
     }
 }
